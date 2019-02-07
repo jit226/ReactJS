@@ -1,0 +1,53 @@
+https://dotnet.microsoft.com/download
+https://reactjs.org/docs/create-a-new-react-app.html
+
+
+Install Node Js
+npm install -g create-react-app
+npx create-react-app my-app
+
+
+.Net Core 2.2
+
+
+
+Server=DESKTOP-COFJOVQ;Database=SampleDb;User Id=saPassword=asd;
+
+
+---------------------------
+Microsoft Visual Studio
+---------------------------
+Error
+
+There was an error running the selected code generator:
+
+'Dependency scaffolder does not support the project runtime version.'
+---------------------------
+OK   
+---------------------------
+Microsoft.CodeAnalysis.CSharp.Workspaces
+
+
+
+---------------------------
+Microsoft Visual Studio
+---------------------------
+Error
+
+There was an error running the selected code generator:
+
+'Dependency scaffolder does not support the project runtime version.'
+---------------------------
+OK   
+---------------------------
+---------------------------
+Microsoft Visual Studio
+---------------------------
+Error
+
+There was an error running the selected code generator:
+
+'Dependency scaffolder does not support the project runtime version.'
+---------------------------
+OK   
+---------------------------
