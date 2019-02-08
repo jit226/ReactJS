@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -29,13 +29,15 @@ namespace ApiProject
         {
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            var connection = @"Server=DESKTOP-COFJOVQ;Database=SampleDb;User Id=saPassword=asd;Trusted_Connection=True;ConnectRetryCount=0";
+            var connection = @"Server=SAHIL-PC\QLOGIC;Database=SampleDb;User Id=jitendra;Password=Admin@123;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<ApiProjectContext>(options => options.UseSqlServer(connection));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ApiProjectContext context)
         {
+            context.Database.EnsureCreated();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -44,6 +46,8 @@ namespace ApiProject
             {
                 app.UseHsts();
             }
+
+
 
             app.UseCors(builder =>
             builder.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod());
